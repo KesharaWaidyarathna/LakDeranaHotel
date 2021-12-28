@@ -64,7 +64,7 @@ namespace LakDeranaHotel.View
         {
             try
             {
-                dgvStudent.DataSource = Customer.getStudentList();
+                dgvStudent.DataSource = Customer.getCustomerList();
                 DataGridViewImageColumn imgColumn = new DataGridViewImageColumn();
                 imgColumn = (DataGridViewImageColumn)dgvStudent.Columns[8];
                 imgColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
@@ -187,7 +187,7 @@ namespace LakDeranaHotel.View
                     customer.image = stream.ToArray();
                 }
 
-                if (Customer.updateStudent(customer))
+                if (Customer.updateCustomer(customer))
                 {
                     showDataTable();
                     btnClear_Click(sender, e);
@@ -212,7 +212,7 @@ namespace LakDeranaHotel.View
                 if (result == DialogResult.Yes)
                 {
                     MarkController.DeleteStudentMarks(txtIdNo.Text);
-                    Customer.DeleteStudent(txtIdNo.Text);
+                    Customer.DeleteCustomer(txtIdNo.Text);
                     MessageBox.Show("The customer Delete successfully ", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
@@ -242,7 +242,7 @@ namespace LakDeranaHotel.View
         {
             try
             {
-                dgvStudent.DataSource = Customer.searchStudent(txtSearch.Text);
+                dgvStudent.DataSource = Customer.searchCustomer(txtSearch.Text);
                 DataGridViewImageColumn imgColumn = new DataGridViewImageColumn();
                 imgColumn = (DataGridViewImageColumn)dgvStudent.Columns[8];
                 imgColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;

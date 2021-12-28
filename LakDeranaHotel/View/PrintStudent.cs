@@ -47,7 +47,7 @@ namespace LakDeranaHotel.View
         {
             try
             {
-                dgvStudent.DataSource = Customer.getStudentList();
+                dgvStudent.DataSource = Customer.getCustomerList();
                 DataGridViewImageColumn imgColumn = new DataGridViewImageColumn();
                 imgColumn = (DataGridViewImageColumn)dgvStudent.Columns[8];
                 imgColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;

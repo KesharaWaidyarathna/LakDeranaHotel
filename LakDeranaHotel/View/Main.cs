@@ -40,9 +40,9 @@ namespace E_pupi
 
         public void customerCount()
         {
-            lblTotalStudent.Text = "Total Students : "+Customer.totalStudent();
-            lblFemaleStudents.Text = "Female : "+Customer.totalFemaleStudent();
-            lblMaleStudents.Text = "Male : "+Customer.totalMaleStudent();
+            lblTotalStudent.Text = "Total Students : "+Customer.totalCustomer();
+            lblFemaleStudents.Text = "Female : "+Customer.totalFemaleCustomer();
+            lblMaleStudents.Text = "Male : "+Customer.totalMaleCustomer();
         }
 
         private void customizeDesign()

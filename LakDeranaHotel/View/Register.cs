@@ -104,7 +104,7 @@ namespace E_pupi
                     customer.image = stream.ToArray();
                 }
 
-                if (Customer.instertStudent(customer))
+                if (Customer.instertCustomer(customer))
                 {
                     showDataTable();
                     btnClear_Click(sender, e);
@@ -124,7 +124,7 @@ namespace E_pupi
         {
             try
             {
-                dgvStudent.DataSource = Customer.getStudentList();
+                dgvStudent.DataSource = Customer.getCustomerList();
                 DataGridViewImageColumn imgColumn = new DataGridViewImageColumn();
                 imgColumn = (DataGridViewImageColumn)dgvStudent.Columns[8];
                 imgColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
