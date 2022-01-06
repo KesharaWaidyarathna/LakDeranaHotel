@@ -30,7 +30,6 @@ namespace E_pupi
         private void InitializeComponent()
         {
             this.Logo = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnStudent = new System.Windows.Forms.Button();
             this.pnlStudentMenue = new System.Windows.Forms.Panel();
@@ -55,19 +54,17 @@ namespace E_pupi
             this.btnLgout = new System.Windows.Forms.Button();
             this.btnDashborad = new System.Windows.Forms.Button();
             this.pnlCampus = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnMangeClass = new System.Windows.Forms.Button();
             this.btnAddClass = new System.Windows.Forms.Button();
             this.btnCampus = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlCover = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblFemaleStudents = new System.Windows.Forms.Label();
             this.lblMaleStudents = new System.Windows.Forms.Label();
             this.lblTotalStudent = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblRole = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblUserRole = new System.Windows.Forms.Label();
@@ -75,8 +72,12 @@ namespace E_pupi
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Logo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnlStudentMenue.SuspendLayout();
             this.pnlCourseMenu.SuspendLayout();
             this.pnlMarksMenu.SuspendLayout();
@@ -85,13 +86,14 @@ namespace E_pupi
             this.pnlCampus.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.pnlCover.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // Logo
@@ -104,17 +106,6 @@ namespace E_pupi
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(191, 112);
             this.Logo.TabIndex = 1;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox3.Image = global::LakDeranaHotel.Properties.Resources.Blue_Hotel___Lodgings_Logo;
-            this.pictureBox3.Location = new System.Drawing.Point(42, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(88, 81);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
             // 
             // label1
             // 
@@ -216,10 +207,9 @@ namespace E_pupi
             this.btnCourse.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCourse.Size = new System.Drawing.Size(191, 54);
             this.btnCourse.TabIndex = 2;
-            this.btnCourse.Text = "Courses";
+            this.btnCourse.Text = "Resvation";
             this.btnCourse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCourse.UseVisualStyleBackColor = true;
-            this.btnCourse.Visible = false;
             this.btnCourse.Click += new System.EventHandler(this.btnCourse_Click);
             // 
             // pnlCourseMenu
@@ -277,7 +267,7 @@ namespace E_pupi
             this.btnCourseNew.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnCourseNew.Size = new System.Drawing.Size(191, 35);
             this.btnCourseNew.TabIndex = 0;
-            this.btnCourseNew.Text = "New Course";
+            this.btnCourseNew.Text = "New Resvation";
             this.btnCourseNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCourseNew.UseVisualStyleBackColor = true;
             this.btnCourseNew.Click += new System.EventHandler(this.btnCourseNew_Click);
@@ -424,6 +414,7 @@ namespace E_pupi
             // 
             this.panel1_slide.AutoScroll = true;
             this.panel1_slide.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1_slide.Controls.Add(this.button2);
             this.panel1_slide.Controls.Add(this.btnLgout);
             this.panel1_slide.Controls.Add(this.btnDashborad);
             this.panel1_slide.Controls.Add(this.pnlCampus);
@@ -450,7 +441,7 @@ namespace E_pupi
             this.btnLgout.FlatAppearance.BorderSize = 0;
             this.btnLgout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLgout.ForeColor = System.Drawing.Color.White;
-            this.btnLgout.Location = new System.Drawing.Point(0, 917);
+            this.btnLgout.Location = new System.Drawing.Point(0, 958);
             this.btnLgout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLgout.Name = "btnLgout";
             this.btnLgout.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -467,11 +458,11 @@ namespace E_pupi
             this.btnDashborad.FlatAppearance.BorderSize = 0;
             this.btnDashborad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashborad.ForeColor = System.Drawing.Color.White;
-            this.btnDashborad.Location = new System.Drawing.Point(0, 863);
+            this.btnDashborad.Location = new System.Drawing.Point(0, 907);
             this.btnDashborad.Margin = new System.Windows.Forms.Padding(4);
             this.btnDashborad.Name = "btnDashborad";
             this.btnDashborad.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnDashborad.Size = new System.Drawing.Size(191, 54);
+            this.btnDashborad.Size = new System.Drawing.Size(191, 51);
             this.btnDashborad.TabIndex = 10;
             this.btnDashborad.Text = "Dashborad";
             this.btnDashborad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -481,13 +472,29 @@ namespace E_pupi
             // pnlCampus
             // 
             this.pnlCampus.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pnlCampus.Controls.Add(this.button1);
             this.pnlCampus.Controls.Add(this.btnMangeClass);
             this.pnlCampus.Controls.Add(this.btnAddClass);
             this.pnlCampus.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCampus.Location = new System.Drawing.Point(0, 781);
             this.pnlCampus.Name = "pnlCampus";
-            this.pnlCampus.Size = new System.Drawing.Size(191, 82);
+            this.pnlCampus.Size = new System.Drawing.Size(191, 126);
             this.pnlCampus.TabIndex = 9;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 79);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(191, 35);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "New Room";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnMangeClass
             // 
@@ -500,7 +507,7 @@ namespace E_pupi
             this.btnMangeClass.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnMangeClass.Size = new System.Drawing.Size(191, 44);
             this.btnMangeClass.TabIndex = 3;
-            this.btnMangeClass.Text = "Manage class";
+            this.btnMangeClass.Text = "Manage Rooms";
             this.btnMangeClass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMangeClass.UseVisualStyleBackColor = true;
             this.btnMangeClass.Click += new System.EventHandler(this.btnMangeClass_Click);
@@ -516,7 +523,7 @@ namespace E_pupi
             this.btnAddClass.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnAddClass.Size = new System.Drawing.Size(191, 35);
             this.btnAddClass.TabIndex = 0;
-            this.btnAddClass.Text = "New Class";
+            this.btnAddClass.Text = "New Room";
             this.btnAddClass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddClass.UseVisualStyleBackColor = true;
             this.btnAddClass.Click += new System.EventHandler(this.btnAddClass_Click);
@@ -533,10 +540,9 @@ namespace E_pupi
             this.btnCampus.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCampus.Size = new System.Drawing.Size(191, 54);
             this.btnCampus.TabIndex = 8;
-            this.btnCampus.Text = "Campus Utils";
+            this.btnCampus.Text = "Rooms";
             this.btnCampus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCampus.UseVisualStyleBackColor = true;
-            this.btnCampus.Visible = false;
             this.btnCampus.Click += new System.EventHandler(this.btnCampus_Click);
             // 
             // pnlMain
@@ -560,28 +566,6 @@ namespace E_pupi
             this.pnlCover.Name = "pnlCover";
             this.pnlCover.Size = new System.Drawing.Size(1146, 801);
             this.pnlCover.TabIndex = 0;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox4.Image = global::LakDeranaHotel.Properties.Resources.Blue_Hotel___Lodgings_Logo;
-            this.pictureBox4.Location = new System.Drawing.Point(1055, 639);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(88, 81);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Image = global::LakDeranaHotel.Properties.Resources.pexels_igor_starkov_791810;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 104);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1146, 616);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
             // 
             // panel4
             // 
@@ -647,17 +631,6 @@ namespace E_pupi
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1146, 52);
             this.panel3.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox1.Image = global::LakDeranaHotel.Properties.Resources._167707;
-            this.pictureBox1.Location = new System.Drawing.Point(1085, -3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 55);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // lblRole
             // 
@@ -731,6 +704,67 @@ namespace E_pupi
             this.label12.TabIndex = 2;
             this.label12.Text = "Lak derana hotel, Sri Lanka";
             // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(0, 1012);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(191, 51);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Attendance";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox4.Image = global::LakDeranaHotel.Properties.Resources.Blue_Hotel___Lodgings_Logo;
+            this.pictureBox4.Location = new System.Drawing.Point(1055, 639);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(88, 81);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Image = global::LakDeranaHotel.Properties.Resources.pexels_igor_starkov_791810;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 104);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1146, 616);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox1.Image = global::LakDeranaHotel.Properties.Resources._167707;
+            this.pictureBox1.Location = new System.Drawing.Point(1085, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 55);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox3.Image = global::LakDeranaHotel.Properties.Resources.Blue_Hotel___Lodgings_Logo;
+            this.pictureBox3.Location = new System.Drawing.Point(42, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(88, 81);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -747,7 +781,6 @@ namespace E_pupi
             this.Load += new System.EventHandler(this.Main_Load);
             this.Logo.ResumeLayout(false);
             this.Logo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnlStudentMenue.ResumeLayout(false);
             this.pnlCourseMenu.ResumeLayout(false);
             this.pnlMarksMenu.ResumeLayout(false);
@@ -756,16 +789,17 @@ namespace E_pupi
             this.pnlCampus.ResumeLayout(false);
             this.pnlMain.ResumeLayout(false);
             this.pnlCover.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -818,6 +852,8 @@ namespace E_pupi
         private System.Windows.Forms.Button btnCampus;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

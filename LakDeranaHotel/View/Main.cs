@@ -135,7 +135,7 @@ namespace E_pupi
 
         private void btnCourseNew_Click(object sender, EventArgs e)
         {
-            openChildForm(new Courses());
+            openChildForm(new Resvation());
             hideSubmenu();
         }
 
@@ -239,13 +239,13 @@ namespace E_pupi
 
         private void btnAddClass_Click(object sender, EventArgs e)
         {
-            openChildForm(new Class());
+            openChildForm(new Room());
             hideSubmenu();
         }
 
         private void btnMangeClass_Click(object sender, EventArgs e)
         {
-            openChildForm(new ManageClass(Role));
+            openChildForm(new RoomManage());
             hideSubmenu();
         }
 
@@ -254,5 +254,11 @@ namespace E_pupi
             hideSubmenu();
         }
         #endregion
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Attendance());
+            hideSubmenu();
+        }
     }
 }

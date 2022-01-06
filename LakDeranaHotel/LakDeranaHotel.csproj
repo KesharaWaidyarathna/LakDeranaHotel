@@ -81,18 +81,38 @@
     <Compile Include="Controller\CourseController.cs" />
     <Compile Include="Controller\DGVPrinterHelper.cs" />
     <Compile Include="Controller\MarkController.cs" />
+    <Compile Include="Controller\ReservationController.cs" />
     <Compile Include="Controller\StaffController.cs" />
     <Compile Include="Model\ClassDAO.cs" />
     <Compile Include="Model\ClassDetailDAO.cs" />
     <Compile Include="Model\CourseDAO.cs" />
     <Compile Include="Model\DBconnection.cs" />
     <Compile Include="Model\MarksDAO.cs" />
+    <Compile Include="Model\RoomDAO.cs" />
     <Compile Include="Model\StaffDAO.cs" />
-    <Compile Include="View\Class.cs">
+    <Compile Include="View\Attendance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Class.Designer.cs">
-      <DependentUpon>Class.cs</DependentUpon>
+    <Compile Include="View\Attendance.Designer.cs">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ManageReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ManageReservation.Designer.cs">
+      <DependentUpon>ManageReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Resvation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Resvation.Designer.cs">
+      <DependentUpon>Resvation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Room.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Room.Designer.cs">
+      <DependentUpon>Room.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Courses.cs">
       <SubType>Form</SubType>
@@ -176,6 +196,12 @@
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller\CustomerController.cs" />
+    <Compile Include="View\RoomManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RoomManage.Designer.cs">
+      <DependentUpon>RoomManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,8 +214,17 @@
     <Compile Include="View\Staff.Designer.cs">
       <DependentUpon>Staff.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\Class.resx">
-      <DependentUpon>Class.cs</DependentUpon>
+    <EmbeddedResource Include="View\Attendance.resx">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ManageReservation.resx">
+      <DependentUpon>ManageReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Resvation.resx">
+      <DependentUpon>Resvation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Room.resx">
+      <DependentUpon>Room.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Courses.resx">
       <DependentUpon>Courses.cs</DependentUpon>
@@ -239,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RoomManage.resx">
+      <DependentUpon>RoomManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>

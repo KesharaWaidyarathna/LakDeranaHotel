@@ -34,7 +34,6 @@ D:\Projcts\MSS\LakDeranaHotel\bin\Debug\LakDeranaHotel.exe
 D:\Projcts\MSS\LakDeranaHotel\bin\Debug\LakDeranaHotel.pdb
 D:\Projcts\MSS\LakDeranaHotel\bin\Debug\Guna.UI2.dll
 D:\Projcts\MSS\LakDeranaHotel\obj\Debug\LakDeranaHotel.csproj.AssemblyReference.cache
-D:\Projcts\MSS\LakDeranaHotel\obj\Debug\LakDeranaHotel.View.Class.resources
 D:\Projcts\MSS\LakDeranaHotel\obj\Debug\LakDeranaHotel.View.Courses.resources
 D:\Projcts\MSS\LakDeranaHotel\obj\Debug\LakDeranaHotel.View.Login.resources
 D:\Projcts\MSS\LakDeranaHotel\obj\Debug\E_pupi.Main.resources
@@ -57,3 +56,8 @@ D:\Projcts\MSS\LakDeranaHotel\obj\Debug\LakDeranaHotel.application
 D:\Projcts\MSS\LakDeranaHotel\obj\Debug\LakDeranaHotel.exe
 D:\Projcts\MSS\LakDeranaHotel\obj\Debug\LakDeranaHotel.pdb
 D:\Projcts\MSS\LakDeranaHotel\obj\Debug\LakDeranaHotel.View.ManageCustomer.resources
+D:\Projcts\MSS\LakDeranaHotel\obj\Debug\LakDeranaHotel.View.Room.resources
+D:\Projcts\MSS\LakDeranaHotel\obj\Debug\LakDeranaHotel.View.RoomManage.resources
+D:\Projcts\MSS\LakDeranaHotel\obj\Debug\LakDeranaHotel.View.Resvation.resources
+D:\Projcts\MSS\LakDeranaHotel\obj\Debug\LakDeranaHotel.View.Attendance.resources
+D:\Projcts\MSS\LakDeranaHotel\obj\Debug\LakDeranaHotel.View.ManageReservation.resources

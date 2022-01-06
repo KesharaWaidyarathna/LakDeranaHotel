@@ -72,7 +72,7 @@ namespace LakDeranaHotel.Controller
         {
             try
             {
-                SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Class]", connection.GetConnection());
+                SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Room]", connection.GetConnection());
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
                 DataTable table = new DataTable();
                 dataAdapter.Fill(table);
