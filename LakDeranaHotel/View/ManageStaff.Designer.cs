@@ -29,9 +29,9 @@ namespace LakDeranaHotel.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvStaff = new Guna.UI2.WinForms.Guna2DataGridView();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -41,6 +41,8 @@ namespace LakDeranaHotel.View
             this.chkAdmin = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
             this.pnlRegister = new System.Windows.Forms.Panel();
+            this.chkManager = new System.Windows.Forms.RadioButton();
+            this.chkBar = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.txtEmployeeId = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -67,8 +69,6 @@ namespace LakDeranaHotel.View
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.chkBar = new System.Windows.Forms.RadioButton();
-            this.chkManager = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.pnlRegister.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxstaff)).BeginInit();
@@ -79,8 +79,8 @@ namespace LakDeranaHotel.View
             // 
             this.dgvStaff.AllowUserToAddRows = false;
             this.dgvStaff.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -89,23 +89,23 @@ namespace LakDeranaHotel.View
             this.dgvStaff.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvStaff.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvStaff.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvStaff.ColumnHeadersHeight = 24;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStaff.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStaff.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvStaff.EnableHeadersVisualStyles = false;
             this.dgvStaff.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvStaff.Location = new System.Drawing.Point(12, 87);
@@ -260,6 +260,36 @@ namespace LakDeranaHotel.View
             this.pnlRegister.Name = "pnlRegister";
             this.pnlRegister.Size = new System.Drawing.Size(1140, 341);
             this.pnlRegister.TabIndex = 28;
+            // 
+            // chkManager
+            // 
+            this.chkManager.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkManager.AutoCheck = false;
+            this.chkManager.AutoSize = true;
+            this.chkManager.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkManager.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.chkManager.Location = new System.Drawing.Point(815, 156);
+            this.chkManager.Name = "chkManager";
+            this.chkManager.Size = new System.Drawing.Size(93, 22);
+            this.chkManager.TabIndex = 51;
+            this.chkManager.Text = "Manger";
+            this.chkManager.UseVisualStyleBackColor = true;
+            this.chkManager.Click += new System.EventHandler(this.chkManager_Click);
+            // 
+            // chkBar
+            // 
+            this.chkBar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkBar.AutoCheck = false;
+            this.chkBar.AutoSize = true;
+            this.chkBar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBar.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.chkBar.Location = new System.Drawing.Point(752, 156);
+            this.chkBar.Name = "chkBar";
+            this.chkBar.Size = new System.Drawing.Size(57, 22);
+            this.chkBar.TabIndex = 50;
+            this.chkBar.Text = "Bar";
+            this.chkBar.UseVisualStyleBackColor = true;
+            this.chkBar.Click += new System.EventHandler(this.chkBar_Click);
             // 
             // label12
             // 
@@ -560,34 +590,6 @@ namespace LakDeranaHotel.View
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // chkBar
-            // 
-            this.chkBar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.chkBar.AutoCheck = false;
-            this.chkBar.AutoSize = true;
-            this.chkBar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBar.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.chkBar.Location = new System.Drawing.Point(752, 156);
-            this.chkBar.Name = "chkBar";
-            this.chkBar.Size = new System.Drawing.Size(57, 22);
-            this.chkBar.TabIndex = 50;
-            this.chkBar.Text = "Bar";
-            this.chkBar.UseVisualStyleBackColor = true;
-            // 
-            // chkManager
-            // 
-            this.chkManager.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.chkManager.AutoCheck = false;
-            this.chkManager.AutoSize = true;
-            this.chkManager.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkManager.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.chkManager.Location = new System.Drawing.Point(815, 156);
-            this.chkManager.Name = "chkManager";
-            this.chkManager.Size = new System.Drawing.Size(93, 22);
-            this.chkManager.TabIndex = 51;
-            this.chkManager.Text = "Manger";
-            this.chkManager.UseVisualStyleBackColor = true;
             // 
             // ManageStaff
             // 

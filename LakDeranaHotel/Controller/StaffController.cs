@@ -237,6 +237,31 @@ namespace LakDeranaHotel.Controller
             }
         }
 
+        public bool IsEmployeeIdExsist(string id)
+        {
+            try
+            {
+                SqlCommand command = new SqlCommand("IF EXISTS(SELECT * FROM Employee WHERE EmployeeId=" + id + " )BEGIN Select  '1' END", connection.GetConnection());
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                string result = "";
+                connection.openConnection();
+                result = (string)command.ExecuteScalar();
+                if (String.IsNullOrEmpty(result))
+                {
+                    connection.closeConnection();
+                    return false;
+                }
+                connection.closeConnection();
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                connection.closeConnection();
+                throw ex;
+            }
+
+        }
 
     }
 }

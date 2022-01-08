@@ -57,7 +57,7 @@ namespace LakDeranaHotel.View
         bool Validation()
         {
 
-            if ((txtFirstName.Text == "") || (txtLastName.Text == "") || (txtAddress.Text == "") || (txtNic.Text == "") || (txtPhone.Text == "") || (dtpDOB.Value == null) || (txtUserName.Text == "") || (txtPassword.Text == "") || (chkFemale.Checked == false && chkMale.Checked == false) || (chkStaff.Checked == false && chkAdmin.Checked == false))
+            if ((txtFirstName.Text == "") || (txtLastName.Text == "") || (txtAddress.Text == "") || (txtNic.Text == "") || (txtPhone.Text == "") || (dtpDOB.Value == null) || (txtUserName.Text == "") || (txtPassword.Text == "") || (chkFemale.Checked == false && chkMale.Checked == false) || (chkStaff.Checked == false && chkAdmin.Checked == false && chkBar.Checked == false && chkManager.Checked == false))
             {
                 return false;
             }
@@ -104,9 +104,23 @@ namespace LakDeranaHotel.View
                     return;
                 }
 
-
+                string role = "";
                 StaffDAO staff = new StaffDAO();
-                staff.EmployeeType= chkAdmin.Checked ? "Admin" : "Staff";
+                if (chkAdmin.Checked)
+                {
+                    role = "Admin";
+                }
+                 else if (chkStaff.Checked)
+                {
+                    role = "Staff";
+                }else if (chkBar.Checked)
+                {
+                    role = "Bar";
+                }else if (chkManager.Checked)
+                {
+                    role = "Manager";
+                }
+                staff.EmployeeType= role;
                 staff.FirstName = txtFirstName.Text;
                 staff.LastName = txtLastName.Text;
                 staff.address = txtAddress.Text;
@@ -182,14 +196,33 @@ namespace LakDeranaHotel.View
         {
             chkAdmin.Checked = true;
             chkStaff.Checked = false;
+            chkBar.Checked = false;
+            chkManager.Checked = false;
         }
 
         private void chkStaff_Click(object sender, EventArgs e)
         {
             chkAdmin.Checked = false;
             chkStaff.Checked = true;
+            chkBar.Checked = false;
+            chkManager.Checked = false;
         }
 
-        
+        private void chkBar_Click(object sender, EventArgs e)
+        {
+            chkAdmin.Checked = false;
+            chkStaff.Checked = false;
+            chkBar.Checked = true;
+            chkManager.Checked = false;
+
+        }
+
+        private void chkManager_Click(object sender, EventArgs e)
+        {
+            chkAdmin.Checked = false;
+            chkStaff.Checked = false;
+            chkBar.Checked = false;
+            chkManager.Checked = true;
+        }
     }
 }

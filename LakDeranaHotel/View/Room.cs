@@ -15,7 +15,7 @@ namespace LakDeranaHotel.View
 {
     public partial class Room : Form
     {
-        ClassController ClassController = new ClassController();
+        RoomController RoomController = new RoomController();
         public Room()
         {
             InitializeComponent();
@@ -31,28 +31,28 @@ namespace LakDeranaHotel.View
         {
             try
             {
-                //if (txtBedCount.Text == "")
-                //{
-                //    MessageBox.Show("The Class name can't be empty", "Empty Fileds", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    return;
-                //}
+                if (!Validation())
+                {
+                    MessageBox.Show("The Fileds can't be empty", "Empty Fileds", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                RoomDAO room = new RoomDAO();
+                room.BedCount = int.Parse(txtBedCount.Text);
+                room.Price = int.Parse(txtPrice.Text);
+                room.Note = txtNote.Text;
+                room.RoomCategory = cmbRoomCategory.Text;
 
-                //ClassDAO @class = new ClassDAO();
-                //@class.ClassName = txtBedCount.Text;
-                //@class.Note = txtNote.Text == "" ? " " : txtNote.Text;
+                if (RoomController.insertRoom(room))
+                {
+                    showDataTable();
+                    MessageBox.Show("The new room save successfully ", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error occur during saving ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
-                //if (ClassController.insertClass(@class))
-                //{
-                //    showDataTable();
-                //    btnClear_Click(sender, e);
-                //    MessageBox.Show("The customer save successfully ", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Error occur during saving ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
-                MessageBox.Show("The Room added successfully ", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                btnClear_Click(this, null);
+                btnClear_Click(sender, e);
             }
             catch (Exception ex)
             {
@@ -64,7 +64,7 @@ namespace LakDeranaHotel.View
         {
             try
             {
-                dgvClass.DataSource = ClassController.getClassList();
+                dgvClass.DataSource = RoomController.getRoomList();
             }
             catch (Exception ex)
             {
@@ -102,7 +102,18 @@ namespace LakDeranaHotel.View
             txtNote.Clear();
             loadInitialData();
         }
+        bool Validation()
+        {
 
+            if ((txtBedCount.Text == "") || (txtPrice.Text == "")  || String.IsNullOrEmpty(cmbRoomCategory.Text))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
         private void label8_Click(object sender, EventArgs e)
         {
 

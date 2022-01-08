@@ -25,11 +25,6 @@ namespace E_pupi
             showDataTable();
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnUpload_Click(object sender, EventArgs e)
         {
             OpenFileDialog opf = new OpenFileDialog();

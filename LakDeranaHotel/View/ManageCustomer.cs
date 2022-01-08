@@ -18,10 +18,6 @@ namespace LakDeranaHotel.View
     public partial class ManageCustomer : Form
     {
         Customer Customer = new Customer();
-        CustomerDAO customer = new CustomerDAO();
-        MarkController MarkController = new MarkController();
-        CourseController Course = new CourseController();
-        private List<MarksDAO> courseslist = new List<MarksDAO>();
         string Role = "";
 
         public ManageCustomer(string role)
@@ -42,7 +38,6 @@ namespace LakDeranaHotel.View
             {
                 lblCourse.Visible = false;
                 dgvCourses.Visible = false;
-                btnAddCourse.Visible = false;
             }
             else
             {
@@ -69,12 +64,12 @@ namespace LakDeranaHotel.View
                 imgColumn = (DataGridViewImageColumn)dgvStudent.Columns[8];
                 imgColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
 
-                if (Role != "Admin")
-                {
-                    dgvCourses.DataSource = Course.getList(new SqlCommand("SELECT  CourseId,CourseName FROM Courses"));
-                    dgvCourses.Columns[0].Visible = false;
+                //if (Role != "Admin")
+                //{
+                //    dgvCourses.DataSource = Course.getList(new SqlCommand("SELECT  CourseId,CourseName FROM Courses"));
+                //    dgvCourses.Columns[0].Visible = false;
 
-                }
+                //}
             }
             catch (Exception ex)
             {
@@ -118,7 +113,6 @@ namespace LakDeranaHotel.View
             txtAddress.Clear();
             dtpDOB.Value = DateTime.Now;
             pBoxStudent.Image = null;
-            courseslist.Clear();
         }
 
         bool Validation()
@@ -211,7 +205,6 @@ namespace LakDeranaHotel.View
                 DialogResult result = MessageBox.Show("Are you sure delete customer?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    MarkController.DeleteStudentMarks(txtIdNo.Text);
                     Customer.DeleteCustomer(txtIdNo.Text);
                     MessageBox.Show("The customer Delete successfully ", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -254,82 +247,5 @@ namespace LakDeranaHotel.View
 
         }
 
-        private void btnAddCourse_Click(object sender, EventArgs e)
-        {
-            List<MarksDAO> removelist = new List<MarksDAO>();
-            courseslist.Clear();
-            var selectedRows = dgvCourses.SelectedRows
-            .OfType<DataGridViewRow>()
-            .Where(row => !row.IsNewRow)
-            .ToArray();
-
-            foreach (var row in selectedRows)
-            {
-                MarksDAO dAO = new MarksDAO();
-                dAO.CourseId = (int)row.Cells[0].Value;
-                dAO.CourseName = (string)row.Cells[1].Value;
-                courseslist.Add(dAO);
-            }
-
-            try
-            {
-                if (courseslist.Count == 0)
-                {
-                    MessageBox.Show("Please select the courses ", "Empty Fileds", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                foreach (MarksDAO marks in courseslist)
-                {
-                    marks.StudentId = int.Parse(txtIdNo.Text);
-                    marks.StudentName = txtFirstName.Text;
-                    marks.Marks = 0;
-                    marks.Discription = " ";
-
-                    if (MarkController.IsMarksAdd(marks))
-                    {
-                        DialogResult result = MessageBox.Show(""+marks.CourseName+"  Already added to the customer ? are you want to continue", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (result == DialogResult.Yes)
-                        {
-                            removelist.Add(marks);
-                        }
-                        else
-                        {
-                            return;
-                        }
-                    }
-                }
-
-                if (removelist.Count > 0)
-                {
-                    foreach(MarksDAO marks in removelist)
-                    {
-                        courseslist.Remove(marks);
-                    }
-                }
-
-                if (courseslist.Count <= 0)
-                {
-                    MessageBox.Show("There is no courses to map", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-
-                if (!MarkController.insertStudentCoursDetails(courseslist))
-                {
-                    MessageBox.Show("Course details not save successfully, Please update courses", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else 
-                { 
-                    showDataTable();
-                    btnClear_Click(sender, e);
-                    MessageBox.Show("The course mapped to customer successfully ", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
     }
 }

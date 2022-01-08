@@ -17,7 +17,6 @@ namespace E_pupi
     {
         private Form activeForm = null;
         Customer Customer = new Customer();
-        CourseController Course = new CourseController();
         string Role = "";
         string Username = "";
 
@@ -73,19 +72,36 @@ namespace E_pupi
         {
             if (Role == "Admin")
             {
-                btnStaffPrint.Visible = false;
-                btnMarks.Visible = false;
-                btnStudentPrint.Visible = false;
-                btnCoursePrint.Visible = false;
+                btnCustomer.Visible = true;
+                btnRooms.Visible = true;
+                btnReservation.Visible = true;
+                btnStaff.Visible = true;
+                btnAttendance.Visible = true;
             }
-            else
+            else if (Role == "Staff")
             {
-                btnStudentReg.Visible = false;
-                btnCourseNew.Visible = false;
-                btnCourseMange.Visible = false;
-                btnStaffMange.Visible = false;
-                btnStaffNew.Visible = false;
-                btnAddClass.Visible = false;
+                btnCustomer.Visible = true;
+                btnRooms.Visible = true;
+                btnReservation.Visible = false;
+                btnStaff.Visible = false;
+                btnAttendance.Visible = true;
+
+            }
+            else if (Role == "Bar")
+            {
+                btnCustomer.Visible = false;
+                btnRooms.Visible = false;
+                btnReservation.Visible = false;
+                btnStaff.Visible = false;
+                btnAttendance.Visible = true;
+
+            }else if (Role == "Manager")
+            {
+                btnCustomer.Visible = false;
+                btnRooms.Visible = false;
+                btnReservation.Visible = true;
+                btnStaff.Visible = false;
+                btnAttendance.Visible = true;
 
             }
         }
@@ -122,7 +138,7 @@ namespace E_pupi
 
         private void btnStudentPrint_Click(object sender, EventArgs e)
         {
-            openChildForm(new PrintStudent());
+            //openChildForm(new PrintStudent());
             hideSubmenu();
         }
         #endregion
@@ -141,13 +157,13 @@ namespace E_pupi
 
         private void btnCourseMange_Click(object sender, EventArgs e)
         {
-            openChildForm(new ManageCourses());
+            openChildForm(new ManageReservation());
             hideSubmenu();
         }
 
         private void btnCoursePrint_Click(object sender, EventArgs e)
         {
-            openChildForm(new PrintCourse());
+            //openChildForm(new PrintCourse());
             hideSubmenu();
         }
         #endregion
@@ -160,7 +176,7 @@ namespace E_pupi
 
         private void btnMarksNew_Click(object sender, EventArgs e)
         {
-            openChildForm(new Marks());
+            //openChildForm(new Marks());
             hideSubmenu();
         }
 
@@ -171,7 +187,7 @@ namespace E_pupi
 
         private void btnMarksPrint_Click(object sender, EventArgs e)
         {
-            openChildForm(new PrintMarks());
+            //openChildForm(new PrintMarks());
             hideSubmenu();
         }
         #endregion
