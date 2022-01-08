@@ -132,6 +132,7 @@ namespace LakDeranaHotel.View
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            txtId.Clear();
             txtCustomerId.Clear();
             txtCustomerName.Clear();
             txtNote.Clear();
@@ -152,7 +153,6 @@ namespace LakDeranaHotel.View
             chkFullPaid.Checked= (bool)dgvResevation.CurrentRow.Cells[6].Value;
             txtPrice.Text = dgvResevation.CurrentRow.Cells[7].Value.ToString();
             txtNote.Text = dgvResevation.CurrentRow.Cells[8].Value.ToString();
-            txtCustomerName.Text = dgvResevation.CurrentRow.Cells[9].Value.ToString();
         }
 
         private void txtCustomerId_KeyPress(object sender, KeyPressEventArgs e)

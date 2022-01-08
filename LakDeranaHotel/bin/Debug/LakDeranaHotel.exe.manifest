@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LakDeranaHotel.exe" size="6868440">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LakDeranaHotel.exe" size="6871000">
       <assemblyIdentity name="LakDeranaHotel" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NfZaUCv4M48ySHsPRDigQW5v6XcBFr3FaWxdmyC7F94=</dsig:DigestValue>
+        <dsig:DigestValue>gmqDu6nn7bfkia6T0kp5tjByXyJgUuUkcYx6oDjEJkI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

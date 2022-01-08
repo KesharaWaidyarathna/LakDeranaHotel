@@ -68,7 +68,7 @@ namespace LakDeranaHotel.Controller
         {
             try
             {
-                SqlCommand command = new SqlCommand("UPDATE [dbo].[Reservation] SET [Customerid] = @Customerid, [RoomId] = @RoomId,[CreatedDate] = @CreatedDate,[FromDate] = @FromDate,[ToDate] = @ToDate,[isPaid] = @isPaid,[total] = @total,[Note] = @Note,[CustomerName] = @CustomerName  WHERE Reservationid=@Reservationid", connection.GetConnection());
+                SqlCommand command = new SqlCommand("UPDATE [dbo].[Reservation] SET [Customerid] = @Customerid, [RoomId] = @RoomId,[FromDate] = @FromDate,[ToDate] = @ToDate,[isPaid] = @isPaid,[total] = @total,[Note] = @Note,[CustomerName] = @CustomerName  WHERE Reservationid=@Reservationid", connection.GetConnection());
                 command.Parameters.Add("@Reservationid", SqlDbType.Int).Value = resvation.ReservationId;
                 command.Parameters.Add("@Customerid", SqlDbType.Int).Value = resvation.CustomerId;
                 command.Parameters.Add("@RoomId", SqlDbType.Int).Value = resvation.RoomId;
@@ -103,7 +103,7 @@ namespace LakDeranaHotel.Controller
         {
             try
             {
-                SqlCommand command = new SqlCommand("Update Room Set isResived=1 ,FromDate=@FromDate,ToDate=@ToDate where RoomId=@RoomId", connection.GetConnection());
+                SqlCommand command = new SqlCommand("Update Room Set IsReserved=1 ,FromDate=@FromDate,ToDate=@ToDate where RoomId=@RoomId", connection.GetConnection());
                 command.Parameters.Add("@RoomId", SqlDbType.Int).Value = resvation.RoomId;
                 command.Parameters.Add("@FromDate", SqlDbType.DateTime).Value = resvation.FromDate;
                 command.Parameters.Add("@ToDate", SqlDbType.DateTime).Value = resvation.ToDate;
